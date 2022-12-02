@@ -67,6 +67,11 @@ img{
     color: var(--MediumGrey);
     font-weight: 700;
 }
+.main-container__butons-style:hover{
+    cursor: pointer;
+    background-color: var(--LightGrey);
+    color: var(--White);
+}
 .main-container__submit{
     margin: 30px 43px;
 }
@@ -80,7 +85,11 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 6px;
-
+}
+.main-container__submit-style:hover{
+    cursor: pointer;
+    background-color: var(--White);
+    color: var(--Orange);
 }
 .attribution { 
     font-size: 11px;
