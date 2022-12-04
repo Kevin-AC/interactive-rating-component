@@ -2,7 +2,7 @@
     --Orange: hsl(25, 97%, 53%);
     --White: hsl(0, 0%, 100%);
     --LightGrey: hsl(217, 12%, 63%);
-    --MediumGrey: hsl(216, 12%, 54%);
+    --MediumGrey: hsl(216, 12%, 24%);
     --DarkBlue: hsl(213, 19%, 18%);
     --VeryDarkBlue: hsl(216, 12%, 8%);
 
@@ -18,53 +18,48 @@ body{
     font-size: 15px;
     background-color: var(--VeryDarkBlue);
     color: var(--White);
-
-}
-.main-container{
-    display: flex;
-    flex-direction: column;
-    margin: 120px auto;
-    width: 414px;
-    height: 430px;
-    background-color: var(--DarkBlue);
-    border-radius: 20px;
-}
-.main-container__start{
-    margin: 40px 0px 10px 40px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #353d46;
-    display: flex;
-}
-img{
-    margin: auto;
    
 }
-.main-container__info{
-    margin: 20px 43px;
-}
 
-.main-container__info-title{
-    margin-bottom: 10px;
+
+.main-container,.tanks-container{
+    margin: 120px auto;
+    width: 330px;
+    height: 365px;
+    background-color: var(--DarkBlue);
+    border-radius:16px;
+    padding:24px;
 }
-.main-container__info-text{
-    margin-right: 30px;
-    line-height: 25px;
-    color: var(--MediumGrey);
+.main-container__start{
+    margin-bottom:20px;
+    background-color:var(--MediumGrey);
+    display: grid;
+    place-content: center;
+}
+.main-container__butons-style,.main-container__start{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.main-container__title,.tanks-container__title{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.main-container__text,.tanks-container__paragraph{
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+    color: var(--LightGrey);
 }
 .main-container__butons{
-    margin: 0 43px;
+    margin-bottom: 10px;
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 .main-container__butons-style{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
     border-style: none;
-    background-color:#353d46 ;
-    color: var(--MediumGrey);
+    background-color:var(--MediumGrey);
+    color: var(--LightGrey);
     font-weight: 700;
 }
 .main-container__butons-style:hover{
@@ -72,27 +67,76 @@ img{
     background-color: var(--LightGrey);
     color: var(--White);
 }
-.main-container__submit{
-    margin: 30px 43px;
+.main-container__butons-style:focus{
+    color: var(--White);
+    background-color: var(--Orange);
 }
-.main-container__submit-style{
-    width: 315px;
-    height: 50px;
+.main-container__submit{
+    margin: 20px 0;
+    width: 100%;
+    height: 45px;
     border-radius: 50px;
     border-style: none;
     background-color: var(--Orange);
     color: white;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
 }
-.main-container__submit-style:hover{
+.main-container__submit:hover{
     cursor: pointer;
     background-color: var(--White);
     color: var(--Orange);
 }
+/**************************************/
+.tanks-container{
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.tanks-container__img{
+    width: 150px;
+    margin-bottom: 30px;
+}
+.tanks-container__result--text{
+    font-size: 13px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    background-color: var(--MediumGrey);
+    height: 35px;
+    width: 170px;
+    text-align: center;
+    padding: 9px 0;
+    color: var(--Orange);
+}
+.tanks-container__paragraph{
+    text-align: center;
+}
+
+@media(min-width:600px){
+    .main-container,.tanks-container{
+        width: 412px;
+        height: 412px;
+        padding: 34px; 
+    }
+    .main-container__butons-style,.main-container__start{
+        width: 50px;
+        height: 50px;
+    }
+    .main-container__title,.tanks-container__title{
+        font-size:29px;
+    }
+    .main-container__text,.tanks-container__paragraph{
+        font-size: 16px;
+    }
+    .tanks-container__result--text{
+        font-size: 1em;
+        width: 196px;
+    }
+}
+
 .attribution { 
-    font-size: 11px;
+    font-size: 12px;
     text-align: center; 
 }
 .attribution a { 
